@@ -1,0 +1,800 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+      
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head profile="http://www.w3.org/2005/11/profile http://a9.com/-/spec/opensearch/1.1/">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   
+    <title>CiteSeerX &mdash; Lander,“The Influence of Caches on the Performance</title>
+  
+  
+    <meta name="description" content="CiteSeerX - Document Details (Isaac Councill, Lee Giles, Pradeep Teregowda): We investigate the effect that caches have on the performance of sorting algorithms both experimentally and analytically. To address the performance problems that high cache miss penalties introduce we restructure mergesort, quicksort, and heapsort in order to improve their cache locality. For all three algorithms the improvement in cache performance leads to a reduction in total execution time. We also investigate the performance of radix sort. Despite the extremely low instruction count incurred by this linear time sorting algorithm, its relatively poor cache performance results in worse overall performance than the efficient comparison based sorting algorithms. For each algorithm we provide an analysis that closely predicts the number of cache misses incurred by the algorithm. Q 1999 Academic Press 1." />
+  
+  
+    <meta name="keywords" content="CiteSeerX, Richard E. Ladner" />
+  
+    
+    <meta name="citation_title" content="Lander,“The Influence of Caches on the Performance" />
+  
+  
+    <meta name="citation_authors" content="Richard E. Ladner" />
+  
+  
+    <meta name="citation_year" content="1996" />
+  
+  
+    <meta name="citation_conference" content="of Sorting”, Eight Annual ACM Symposium on Discrete Algorithms" />
+  
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+  
+  <link rel="search" title="CiteSeerX" type="application/opensearchdescription+xml" href="/search_plugins/citeseerx_general.xml" />
+  <link rel="search" title="CiteSeerX Author" type="application/opensearchdescription+xml" href="/search_plugins/citeseerx_author.xml" />
+  <link rel="search" title="CiteSeerX Title" type="application/opensearchdescription+xml" href="/search_plugins/citeseerx_title.xml" />
+    
+    
+	<link rel="alternate" type="application/atom+xml" title="CiteSeerX Search Results - Atom" href="/search?" />
+	<link rel="alternate" type="application/rss+xml" title="CiteSeerX Search Results - RSS" href="/search?" />
+
+	
+	<link type="text/css" rel="stylesheet" href="/css/main.css" />
+	<script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="/js/jquery-ui-1.8.custom.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.idTabs.min.js"></script>
+	<script type="text/javascript" src="/js/metacart.js"></script>
+	<script type="text/javascript" src="/js/topnav.js"></script>
+	<script type="text/javascript" src="/js/citeseerx.js"></script>
+	<script type="text/javascript" src="/js/correctionutils.js"></script>
+	<script type="text/javascript" src="/js/checkboxes.js"></script>
+	<script type="text/javascript" src="/js/ga.js"></script>
+	
+	
+</head>
+<body>
+	<div id="wrapper">
+  	
+
+
+
+<div id="topnav">
+  
+  <ul id="search_nav">
+    
+      <li class="active"><a href="#search_docs">Documents</a></li>
+      <li><a href="/#search_auth">Authors</a></li>
+      <li><a href="/#search_tables">Tables</a></li>
+      
+    
+    
+  </ul>
+  
+  
+  
+    
+    
+    
+    <ul id="toptools">
+  		
+        <li><a href="/myciteseer/login">Log in</a></li>
+        <li><a href="/mcsutils/newAccount">Sign up</a></li>
+      
+        <li><a href="/metacart">MetaCart</a></li>
+        <li><a href="http://www.givenow.psu.edu/CiteseerxFund"><font color="#045FB4">Donate</font></a></li>
+    </ul>
+  
+</div>
+
+	  <div id="header">
+			<h1 id="title"><a href="/" title="CiteSeerX"><img src="/images/csx_logo.png" alt="CiteSeerX logo" height="50%" width="50%"/></a></h1>
+		</div>
+
+<div id="main">
+<div id="search">
+  
+    <div id="search_docs">
+      <form method="get" action="/search" enctype="application/x-www-form-urlencoded">
+        <label>Documents:</label>
+        <input class="s_field" type="text" name="q" value="" />
+		<input class="s_button" type="submit" name="submit" value="Search" alt="Search" />
+		<div class="opts">
+          <a href="/advanced_search" title="Search full text, title, abstract, date, author name, author affiliation, etc.">Advanced Search</a>
+          <input class="c_box" type="checkbox" name="ic" value="1"  /> Include Citations
+        </div>
+        <input type="hidden" name="sort" value="rlv" />
+        <input type="hidden" name="t" value="doc" />
+      </form>
+    </div>
+		  
+	<div id="search_auth">
+	  <form method="get" action="/search" enctype="application/x-www-form-urlencoded">
+	    <label>Authors:</label>
+        <input class="s_field" type="text" name="q" value="" />
+        <input class="s_button" type="submit" name="submit" value="Search" alt="Search" />
+        <div class="opts">
+          <a href="/advanced_search" title="Search full text, title, abstract, date, author name, author affiliation, etc.">Advanced Search</a>
+          <input class="c_box" type="checkbox" name="ic" value="1"  /> Include Citations |
+          <input class="c_box" type="checkbox" name="uauth" value="1" checked="checked" /> Disambiguate
+        </div>
+        <input type="hidden" name="sort" value="ndocs" />
+        <input type="hidden" name="t" value="auth" />
+	   </form>
+	  </div>		  
+    <div id="search_tables">
+      <form method="get" action="/search" enctype="application/x-www-form-urlencoded">
+        <label>Tables:</label>
+        <input class="s_field" type="text" name="q" value="" />
+        <input class="s_button" type="submit" name="submit" value="Search" alt="Search" />
+        <input type="hidden" name="t" value="table" />
+        <input type="hidden" name="sort" value="rlv" />
+     </form>
+    </div>
+
+
+  
+  
+</div>
+    <div id="viewHeader" class="viewDoc">
+      <h2>Lander,“The Influence of Caches on the Performance  (1996) </h2>
+      
+       <div id="downloads">
+	
+		
+        		<h3>Cached</h3>
+        		<ul id="clinks">
+        		
+	        	</ul>
+		
+		
+	
+	
+		<h3>Download Links</h3>
+        	<ul id="dlinks">
+        	
+          		<li>
+                	<a href="https://www.cs.auckland.ac.nz/~mcw/Teaching/refs/sorting/ladner-lamarca-cach-sorting.pdf" title="https://www.cs.auckland.ac.nz/~mcw/Teaching/refs/sorting/ladner-lamarca-cach-sorting.pdf" escapeXml="true">
+          		[www.cs.auckland.ac.nz]
+			</a>
+          		</li>
+        	
+	
+        <br/>
+	
+        </ul>
+      </div>
+      <div id="docTools">
+        <ul class="button_nav">
+          <li><a style="cursor: pointer;" onclick="addToCartProxy(9056699)">Save to List</a>
+          <span id="cmsg_9056699" class="cartmsg"></span></li>
+          <li><a class="remove"  href="/myciteseer/action/addPaperCollection?doi=10.1.1.456.3616" title="Add this document to your collection (Account required)">Add to Collection</a></li>
+          <li><a class="remove" href="/correct?doi=10.1.1.456.3616" title="Submit corrections for this document (Account required)">Correct Errors</a></li>
+          <li><a class="remove" href="/myciteseer/action/editMonitors?doi=10.1.1.456.3616" title="Monitor changes to this document (Account required)">Monitor Changes</a></li>
+        </ul>
+      </div>
+            <div id="docInfo">
+      <div id="docAuthors">
+        by 
+          
+            
+              
+              
+                Richard E. Ladner
+              
+              
+            
+          
+        </div>
+      <div id="docOther">
+        <table>
+          
+            <tr id="docVenue"><td class="title">Venue:</td><td>of Sorting”, Eight Annual ACM Symposium on Discrete Algorithms</td>
+          
+          
+            <tr id="docCites"><td class="title">Citations:</td><td><a href="/showciting?doi=10.1.1.456.3616" title="number of citations">2 - 0 self</a>
+            </td></tr>
+          
+        </table>
+      </div>
+    </div>
+      
+      <div class="clear"></div>
+    </div>
+
+    
+
+
+    <div id="docMenu" class="submenu">
+    <ul>
+      <li  class="active" ><a href="/viewdoc/summary?doi=10.1.1.456.3616">Summary</a></li>
+      <li  ><a href="/viewdoc/similar?doi=10.1.1.456.3616&amp;type=ab" title="Documents that cite the same works">Active Bibliography</a></li>
+      <li  ><a href="/viewdoc/similar?doi=10.1.1.456.3616&amp;type=cc" title="Documents cited by the same works">Co-citation</a></li>
+      <li ><a href="/viewdoc/similar?doi=10.1.1.456.3616&amp;type=sc" title="Documents in the Same Cluster">Clustered Documents</a></li>
+      <li ><a href="/viewdoc/versions?doi=10.1.1.456.3616">Version History</a></li>
+      <!--<li><a  href="/viewdoc/clustered?doi=10.1.1.456.3616">Clustered Documents</a></li>-->
+    </ul>
+    </div>
+
+
+
+
+
+
+  <div id="viewContent" class="sidebar">
+    <div id="viewContent-inner">
+      <div id="viewSidebar">
+        
+          
+          
+          
+        		
+        
+        
+        
+          <div id="bibtex" class="block">
+            <h3>BibTeX</h3>
+            <p>@INPROCEEDINGS{Ladner96lander,“theinfluence,<br/>&nbsp;&nbsp;&nbsp;&nbsp;author = {Richard E. Ladner},<br/>&nbsp;&nbsp;&nbsp;&nbsp;title = {Lander,“The Influence of Caches on the Performance},<br/>&nbsp;&nbsp;&nbsp;&nbsp;booktitle = {of Sorting”, Eight Annual ACM Symposium on Discrete Algorithms},<br/>&nbsp;&nbsp;&nbsp;&nbsp;year = {1996}<br/>}<br/></p>
+          </div> <!-- End content box -->
+        
+        
+        <div id="bookmark" class="block">
+          <h3>Bookmark</h3>
+          <table border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td><a href="/viewdoc/bookmark?doi=10.1.1.456.3616&amp;title=Lander,“The Influence of Caches on the Performance&amp;site=citeulike" title="CiteULike"><img src="/images/citeulike.png" alt="citeulike"/></a></td>
+              <td><a href="/viewdoc/bookmark?doi=10.1.1.456.3616&amp;site=connotea" title="Connotea"><img src="/images/connotea.png" alt="Connotea"/></a></td>
+              <td><a href="/viewdoc/bookmark?doi=10.1.1.456.3616&amp;site=bibsonomy&amp;title=Lander,“The Influence of Caches on the Performance" title="BibSonomy"><img src="/images/bibsonomy.png" alt="Bibsonomy"/></a></td>
+              <td><a href="/viewdoc/bookmark?doi=10.1.1.456.3616&amp;title=Lander,“The Influence of Caches on the Performance&amp;site=delicious" title="del.icio.us"><img src="/images/delicious.gif" alt="Del.icio.us"/></a></td>
+              <td><a href="/viewdoc/bookmark?doi=10.1.1.456.3616&amp;title=Lander,“The Influence of Caches on the Performance&amp;site=digg" title="Digg it"><img src="/images/digg.png" alt="Digg"/></a></td>
+              <td><a href="/viewdoc/bookmark?doi=10.1.1.456.3616&amp;title=Lander,“The Influence of Caches on the Performance&amp;site=reddit" title="Reddit"><img src="/images/reddit.gif" alt="Reddit"/></a></td>
+              </tr>
+	      <tr>
+		<td colspan="6">
+		<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+		<script>
+			var doi;
+			doi="10.1.1.456.3616";
+			new TWTR.Widget({
+  			version: 2,
+  			type: 'search',
+  			search: 'citeseerx+'+doi,
+  			interval: 30000,
+  			title: 'CiteSeerX',
+  			subject: doi,
+  			width: 255,
+  			height: 30,
+  			theme: {
+    			shell: {
+      			background: '#E6E6E6',
+      			color: '#000000'
+    			},
+    			tweets: {
+      				background: '#ffffff',
+      				color: '#444444',
+      				links: '#1985b5'
+    			}
+  		},
+  		features: {
+    		scrollbar: false,
+    		loop: true,
+    		live: true,
+    		behavior: 'default'
+ 		 }
+		}).render().start();
+		</script>	
+		</td>
+	      </tr>
+          </table>
+        </div>
+        
+          <div id="OpenURL" class="block">
+            <h3>OpenURL</h3>
+            <span class="Z3988" title="url_ver=Z39.88-2004&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;ctx_ver=Z39.88-2004&amp;ctx_enc=info%3Aofi%2Fenc%3AUTF-8&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft_id=http%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.456.3616&amp;rft.atitle=Lander%2C%E2%80%9CThe+Influence+of+Caches+on+the+Performance&amp;rft.jtitle=OF+SORTING%E2%80%9D%2C+EIGHT+ANNUAL+ACM+SYMPOSIUM+ON+DISCRETE+ALGORITHMS&amp;rft.date=1996&amp;rft.genre=article&amp;rft.aulast=Ladner&amp;rft.aufirst=+Richard+E.&amp;rft.au=Ladner%2C+Richard+E.">&nbsp;</span>
+          </div>
+        
+      </div> 
+    <div id="abstract">
+      <h3>Abstract</h3>
+      <p>We investigate the effect that caches have on the performance of sorting algorithms both experimentally and analytically. To address the performance problems that high cache miss penalties introduce we restructure mergesort, quicksort, and heapsort in order to improve their cache locality. For all three algorithms the improvement in cache performance leads to a reduction in total execution time. We also investigate the performance of radix sort. Despite the extremely low instruction count incurred by this linear time sorting algorithm, its relatively poor cache performance results in worse overall performance than the efficient comparison based sorting algorithms. For each algorithm we provide an analysis that closely predicts the number of cache misses incurred by the algorithm. Q 1999 Academic Press 1.</p>
+    </div>
+    <div id="citations">
+      <h3>Citations</h3>
+      
+      
+        <table class="refs" border="0" cellspacing="5" cellpadding="5">
+          
+            <tr><td class="title">4443</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=600">L.: ‘Computer Architecture: A Quantitative Approach</a>
+                - Patterson, Hennessy
+                 - 1990
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">2284</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=4185">An Introduction to Probability Theory and its Applications</a>
+                - Feller
+                 - 1968
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">759</td>
+              <td><a href="/viewdoc/summary?cid=36674">ATOM A System for Building Customized Program Analysis Tools</a>
+                
+                - Srivastava, Eustace
+                 - 1994
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">758</td>
+              <td><a href="/viewdoc/summary?cid=61324">A data locality optimizing algorithm</a>
+                
+                - Wolf, Lam
+                 - 1991
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">578</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=11692">The input/output complexity of sorting and related problems</a>
+                - Aggarwal, Vitter
+                 - 1988
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">209</td>
+              <td><a href="/viewdoc/summary?cid=101632">Compiler optimizations for improving data locality</a>
+                
+                - Carr, McKinley, et al.
+                 - 1994
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">180</td>
+              <td><a href="/viewdoc/summary?cid=25491">A comparison of sorting algorithms for the Connection Machine CM-2</a>
+                
+                - Blelloch, Leiserson, et al.
+                 - 1991
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">174</td>
+              <td><a href="/viewdoc/summary?cid=123137">Unifying Data and Control Transformations for Distributed Shared{Memory Machines</a>
+                
+                - Li
+                 - 1995
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">156</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=145655">An analytical cache model</a>
+                - Agarwal, Hennessy, et al.
+                 - 1989
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">153</td>
+              <td><a href="/viewdoc/summary?cid=90307">Cache Profiling and the SPEC Benchmarks: A Case Study</a>
+                
+                - Lebeck, Wood
+                 - 1994
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">135</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=286217">A Model for Hierarchical Memory</a>
+                - Aggarwal, Alpern, et al.
+                
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">113</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=1610879">Hierarchical Memory with Block Transfer</a>
+                - Aggarwal, Chandra, et al.
+                 - 1987
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">100</td>
+              <td><a href="/viewdoc/summary?cid=31113">M c Kinley. Optimizing for parallelism and data locality</a>
+                
+                - Kennedy, S
+                 - 1992
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">82</td>
+              <td><a href="/viewdoc/summary?cid=61318">Cache interference phenomena</a>
+                
+                - Temam, Fricker, et al.
+                 - 1994
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">78</td>
+              <td><a href="/viewdoc/summary?cid=10278">Improving the cache locality of memory allocation</a>
+                
+                - Grunwald, Zorn, et al.
+                 - 1993
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">76</td>
+              <td><a href="/viewdoc/summary?cid=139574">Improved algorithms and data structures for solving graph problems in external memory</a>
+                
+                - Kumar, Schwabe
+                 - 1996
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">72</td>
+              <td><a href="/viewdoc/summary?cid=7993">The influence of caches on the performance of heaps</a>
+                
+                - LaMarca, Ladner
+                 - 1996
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">66</td>
+              <td><a href="/viewdoc/summary?cid=7997">AlphaSort: A RISC Machine Sort</a>
+                
+                - Nyberg, Barclay, et al.
+                 - 1994
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">66</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=1015469">Probabilistic Parallel Algorithms for Sorting and Selection</a>
+                - Reischuk
+                 - 1985
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">65</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=528325">The Art of Computer Programming, Vol. III: Sorting and Searching</a>
+                - Knuth
+                 - 1973
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">44</td>
+              <td><a href="/viewdoc/summary?cid=401904">Ecient external memory algorithms by simulating coarse-grained parallel algorithms</a>
+                
+                - Dehne, Dittrich, et al.
+                 - 1997
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">39</td>
+              <td><a href="/viewdoc/summary?cid=1242020">Memory subsystem performance of programs using copying garbage collection</a>
+                
+                - Diwan, Tarditi, et al.
+                 - 1994
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">38</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=25505">Parallel sorting by over partitioning</a>
+                - Li, Sevcik
+                 - 1994
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">37</td>
+              <td><a href="/viewdoc/summary?cid=978149">I/O-efficient scientific computation using TPIE</a>
+                
+                - Vengoff, Vitter
+                 - 1996
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">32</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=1267423">placement algorithms for large real-indexed caches</a>
+                - Kessler, Hill
+                 - 1992
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">30</td>
+              <td><a href="/viewdoc/summary?cid=638484">On sorting strings in external memory</a>
+                
+                - Arge, Ferragina, et al.
+                 - 1997
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">28</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=1278859">A model of workloads and its use in miss-rate prediction for fully associative caches</a>
+                - SINGH, STONE, et al.
+                 - 1992
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">24</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=1264856">The TLB slice -- A Low-Cost High-Speed Address Translation Mechanisms</a>
+                - Taylor, Davis, et al.
+                 - 1990
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">23</td>
+              <td><a href="/viewdoc/summary?cid=557575">The AlphaServer 8000  .  .series: High-end server platform development, Digital Tech</a>
+                
+                - Fenwick, Foley, et al.
+                 - 1995
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">22</td>
+              <td><a href="/viewdoc/summary?cid=1261654">Influence of crossinterferences on blocked loops: A case study with matrix-vector multiply</a>
+                
+                - Fricker, Temam, et al.
+                 - 1995
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">20</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=1259753">Priority queues with update and finding minimum spanning trees</a>
+                - Johnson
+                 - 1975
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">17</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=2110545">Caches and Algorithms</a>
+                - LaMarca
+                 - 1996
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">11</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=2253683">An optimal algorithm for deleting the root of a heap</a>
+                - CARLSSON
+                 - 1991
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">9</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=2253687">Performance of priority queue structures in a virtual memory environment</a>
+                - Naor, Martel, et al.
+                 - 1991
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">7</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=4791533">Optimal partitioning which maximizes the sum of the weighted averages</a>
+                - Gal, Klots
+                 - 1995
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">4</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=3473155">Optimal mapping in direct mapped cache environments</a>
+                - Gal, Hollander, et al.
+                
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">4</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=3351997">Performance comparison of distributive and mergesort as external sorting algorithms</a>
+                - Verkamo
+                 - 1989
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">3</td>
+              <td><a href="/viewdoc/summary?cid=2816871">Hardware and Software Mechanisms for Reducing Load Latency</a>
+                
+                - Austin
+                 - 1996
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=30299311">The uniform memory hierarchy model</a>
+                - Alpern, Carter, et al.
+                
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=30299312">The buffer tree: A new technique for optimal IrO-algorithms</a>
+                - Arge
+                 - 1995
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=30299313">Theory and practice of IrO-efficient algorithms for multidimensional batched searching problems</a>
+                - Arge, Procopiuc, et al.
+                 - 1998
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=30299314">Avoiding conflict masses dynamically in large direct-mapped caches</a>
+                - Bershad, Lee, et al.
+                 - 1994
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=30299315">Experiments on the practical IrO efficiency of geometric algorithms: Distribution sweep vs. plane sweep</a>
+                - Chiang
+                 - 1995
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=30299316">Strategies for cache and local memory manage .  .ment by global program transformation</a>
+                - Gannon, Jalby, et al.
+                 - 1988
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=30299317">On the Complexity of Direct Caching</a>
+                - Hollander, Itai
+                 - 1994
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting?cid=30299318">More iteration space tiling, in ``Proceedings of Supercomputing &#039;89</a>
+                - Wolfe
+                 - 1989
+		
+		  
+		
+              </td></tr>
+            
+        </table>
+      
+    </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+
+
+
+  <div id="footer">
+  	<div id="sponsors">
+  	<a href="http://www.nsf.gov"><img src="/images/nsf_logo.png" alt="The National Science Foundation"/></a>
+  	<br />
+  	<a href="http://lucene.apache.org/solr/"><img src="/images/solrlogo1.png" alt="Apache Solr" height="20%" width="20%"/></a>
+  	</div>
+    <ul class="links">
+      <li><a href="http://csxstatic.ist.psu.edu/about" target="_blank">About CiteSeerX</a></li>
+      <li><a href="http://csxcrawlweb01.ist.psu.edu/submit_pub/" target="_blank">Submit and Index Documents</a></li>
+      <li><a href="http://csxstatic.ist.psu.edu/privacy" target="_blank">Privacy Policy</a></li>
+      <li><a href="http://csxstatic.ist.psu.edu/help" target="_blank">Help</a></li>
+      <li><a href="http://csxstatic.ist.psu.edu/about/data" target="_blank">Data</a></li>      
+      <li><a href="https://github.com/SeerLabs/CiteSeerX" target="_blank">Source</a></li>      
+      <li><a href="http://csxstatic.ist.psu.edu/contact" target="_blank">Contact Us</a></li>
+    </ul>
+  	<p class="info">Developed at and hosted by <a href="http://ist.psu.edu">The College of Information Sciences and Technology</a></p>
+  	<p>&copy; 2007-2015 <a href="http://www.psu.edu">The Pennsylvania State University</a></p>
+  </div>
+</div> 
+
+</body>
+</html>
+
