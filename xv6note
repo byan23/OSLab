@@ -1,0 +1,11 @@
+
+kernel/sysfunc.h:   declares all sys_### system call handlers headers
+kernel/sysproc.c:   defines system call handlers
+
+include/syscall.h:  defines all system call numbers
+user/user.h:	    declares all system call headers
+kernel/proc.c:	    defines some system call functions
+
+kernel/syscall.c:   where system call gets issued
+
+user/usys.S:	    assemblies to trigger the instr of syscall

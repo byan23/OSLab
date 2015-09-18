@@ -1,0 +1,173 @@
+starting build
+
+**********************************************************************
+
+Test build
+build project using make
+
+**********************************************************************
+Trying to clean project using make clean
+make clean
+make: *** No rule to make target `clean'.  Stop.
+Trying to build project using make
+make
+make: *** No targets specified and no makefile found.  Stop.
+Trying to build using gcc
+gcc -O -Wall -o rangesort rangesort.c -I/afs/cs.wisc.edu/p/course/cs537-dusseau/ta/tests/1a-contest
+
+
+test build PASSED
+ (build project using make)
+
+starting contest
+
+**********************************************************************
+
+Test contest
+contest
+
+**********************************************************************
+Generating input file
+/u/c/s/cs537-1/ta/tests/1a-contest/generate -s 0 -n 1000000 -o /tmp/tmpTiLVwl/p/infile
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.187064886093 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.182862997055 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.183062076569 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.184337854385 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.183088064194 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.18297290802 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.182914018631 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.183305025101 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.182992935181 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.183127880096 seconds
+Checking output
+Generating input file
+/u/c/s/cs537-1/ta/tests/1a-contest/generate -s 1 -n 1000000 -o /tmp/tmpTiLVwl/p/infile
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.1879799366 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.184991121292 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.184764862061 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.184498071671 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.185295820236 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.184653043747 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.184152126312 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.185235977173 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.184746026993 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.185023069382 seconds
+Checking output
+Generating input file
+/u/c/s/cs537-1/ta/tests/1a-contest/generate -s 2 -n 1000000 -o /tmp/tmpTiLVwl/p/infile
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.186517953873 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.185700893402 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.184026002884 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.18381690979 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.184211015701 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.18373298645 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.184569835663 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.184730052948 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.184529066086 seconds
+Checking output
+Running rangesort with range [1, 100000000]
+/tmp/tmpTiLVwl/p/rangesort -i /tmp/tmpTiLVwl/p/infile -o /tmp/tmpTiLVwl/p/outfile -l 1 -h 100000000
+Rangesort completed in 0.189167022705 seconds
+Checking output
+best   0.182862997055
+median 0.184513568878
+worst  0.189167022705
+
+
+test contest PASSED
+ (contest)
+
+**********************************************************************
+Summary:
+test build PASSED
+ (build project using make)
+
+test contest PASSED
+ (contest)
+
+Passed 2 of 2 tests.
+Overall 2 of 2

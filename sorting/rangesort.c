@@ -10,9 +10,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
-#define KEY_REC_SIZE 12
-//#define CACHE_SIZE (6000 * 1000)
-#define MAX_NUM_ENTRY 15
+#define MAX_NUM_ENTRY 10
 
 typedef struct __key_rec {
   unsigned int key;
@@ -20,8 +18,8 @@ typedef struct __key_rec {
 } key_rec;
 
 void usage(char *prog) {
-  fprintf(stderr, "Usage: %s -i inputfile -o outputfile -l low value"
-	  "-h high value\n", prog);
+  fprintf(stderr, "Usage: %s -i inputfile -o outputfile -l lowvalue"
+	  " -h highvalue\n", prog);
   exit(1);
 }
 
@@ -77,7 +75,6 @@ void key_opt_qsort(key_rec *base, const size_t num) {
     key_insertsort(base, num);
     return;
   }
-  //if (num == 0) return;
   int pivot = num - 1;
   int i = -1;
   int j = num;
@@ -101,14 +98,14 @@ int main(int argc, char *argv[]) {
   // arguments
   char *inputfile = "/no/such/file";
   char *outputfile = "/no/such/file";
-  long input_low = 0;
-  long input_high = 0;
+  unsigned long input_low = 0;
+  unsigned long input_high = 0;
   unsigned int low_value = 0;
   unsigned int high_value = 0;
 
   // input params
-  // TODO(winstonyan): Add input validation. File name and unsigned 32 int
   int c;
+  char *p;
   opterr = 0;
   while ((c = getopt(argc, argv, "i:o:l:h:")) != -1) {
     switch (c) {
@@ -119,15 +116,14 @@ int main(int argc, char *argv[]) {
       outputfile = strdup(optarg);
       break;
     case 'l':
-      input_low = strtol(optarg, NULL, 10);
-      if (input_low == 0 && strcmp(optarg, "0") != 0) err_range();
-      if (input_low > UINT_MAX || input_low < 0) err_range();
+      input_low = strtol(optarg, &p, 10);
+      if (*p != '\0' || input_low > UINT_MAX || input_low < 0) err_range();
       low_value = input_low;
       break;
     case 'h':
-      input_high = strtol(optarg, NULL, 10);
-      if (input_high == 0 && strcmp(optarg, "0") != 0) err_range();
-      if (input_high > UINT_MAX || input_high < 0 || input_high < input_low)
+      input_high = strtol(optarg, &p, 10);
+      if (*p != '\0' || input_high > UINT_MAX || input_high < 0 ||
+						 input_high < input_low)
 	err_range();
       high_value = input_high;
       break;
@@ -137,13 +133,11 @@ int main(int argc, char *argv[]) {
   }
 
   // read input file
-  clock_t t = clock();
   int inputfd = open(inputfile, O_RDONLY);
   if (inputfd < 0) err_fileopen(inputfile);
   // sort
   rec_t r;
   rec_t* records = (rec_t*)malloc(sizeof(rec_t));
-  //key_rec* keys = (key_rec*)malloc(sizeof(key_rec));
   int num_of_rec = 0;
   while (1) {
     int rc;
@@ -155,13 +149,8 @@ int main(int argc, char *argv[]) {
       records = (rec_t*)realloc(records, num_of_rec * sizeof(rec_t));
       records[num_of_rec - 1] = r;
     }
-    // TESTOUTPUT
-    //printf("read in %d\n", num_of_rec);
   }
   
-  // TESTOUTPUT
-  //printf("%d records.\n", num_of_rec);
-
   close(inputfd);
 
   key_rec* keys = (key_rec*)malloc(num_of_rec * sizeof(key_rec));
@@ -170,14 +159,8 @@ int main(int argc, char *argv[]) {
     keys[i].key = records[i].key;
     keys[i].record = &records[i];
   }
-  // base quick sort
-  //qsort(keys, num_of_rec, sizeof(key_rec), key_cmpfunc);
   // optimized quick sort
   key_opt_qsort(keys, num_of_rec);
-  
-  //TESTOUTPUT
-  t = clock() - t;
-  //printf("spent %fs\n", ((float)t) / CLOCKS_PER_SEC);
   
   // open and create output file
   int outputfd = open(outputfile, O_WRONLY|O_CREAT|O_TRUNC, S_IRWXU);
